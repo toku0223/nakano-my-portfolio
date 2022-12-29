@@ -1,11 +1,11 @@
-import { graphql } from "gatsby"
-import React from "react"
-import "../styles/home.css"
-
+import { graphql, Link } from "gatsby";
+import React from "react";
+import "../styles/home.css";
 
 const Home = ({ data }) => {
   return (
     <div>
+      <Link to="/MyForm">お問い合わせ</Link>
       {data.allWpPost.edges.map(({ node }) => (
         <div key={node.id} >
           <h2>{node.title}</h2>
