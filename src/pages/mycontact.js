@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
-import { ContactForm } from '../plugins/firebase';
+import { contactForm } from '../plugins/firebase';
 
 
 const MyForm = () => {
@@ -16,17 +16,12 @@ const MyForm = () => {
   // データベースへの書き込み
   const createMessage = async () => {
     console.log('ready')
-    const res = await ContactForm(userName, email, title, context)
+    const res = await contactForm(userName, email, title, context)
     console.log(userName)
     console.log('complete', res)
   }
 
-  const pressEnter = (e) => {
-    if (e.key == 'Enter') {
-      e.preventDefault()
-      createMessage()
-    }
-  }
+
   return (
     <>
       <input

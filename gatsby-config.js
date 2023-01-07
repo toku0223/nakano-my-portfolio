@@ -19,3 +19,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,],
 }
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+})

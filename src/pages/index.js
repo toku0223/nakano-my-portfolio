@@ -5,7 +5,8 @@ import "../styles/home.css";
 const Home = ({ data }) => {
   return (
     <div>
-      <Link to="/MyForm">お問い合わせ</Link>
+      <Link to="/mycontact">お問い合わせ</Link>
+      <Link to="/test1">test1</Link>
       {data.allWpPost.edges.map(({ node }) => (
         <div key={node.id} >
           <h2>{node.title}</h2>
